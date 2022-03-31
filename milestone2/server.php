@@ -1,6 +1,7 @@
 <?php
 
-    // Array albums
+    $genere = (isset( $_GET['genere'])) ? ($_GET['genere']) : (null);
+
     $albums = [
         [
             "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -83,10 +84,14 @@
         ]
     ];
 
+    if($genere):
+        $albums = (array_filter($albums, function ($v, $k, $genere) {
+            return $k == 'genre' && $v == $genere;
+        }, ARRAY_FILTER_USE_BOTH));
+    endif;
+
     // Funzione header
     header('Content-Type: application/json');
 
     // Echo $albums json file
     echo json_encode($albums);
-
-?>
