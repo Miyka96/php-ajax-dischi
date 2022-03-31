@@ -6,10 +6,11 @@ const app = new Vue(
         },
         methods: {
             fetchData() {
-                axios.get('../milestone2/server.php')
+                axios.get('http://localhost:8888/php-ajax-dischi/milestone2/server.php')
                 .then( res => {
                     const results = res.data;
-                    console.log(res);
+                    this.dischi=results;
+                    console.log(this.dischi);
                 })
                 .catch(err => {
                     console.warn(err.response);
