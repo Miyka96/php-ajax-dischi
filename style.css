@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+  }
+  header {
+    height: 70px;
+    background-color: #2e3a46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 20px;
+    height: 45px;
+  }
+  .album-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #2E3A46;
+    height: 355px;
+    width: 198px;
+  }
+  .card__title {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .card__thumb img{
+    display: block;
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
+  }
+  .card__name {
+    color: gray;
+    font-size: 15px;
+  }
+  .card__age {
+    color: gray;
+    font-size: 15px;
+  }
+  
+  section {
+    height:867px;
+    background-color: #1E2D3B;
+    padding-top: 70px;
+  }
+  .container {
+    max-width: 1152px;
+    margin: 0 auto;
+  }
