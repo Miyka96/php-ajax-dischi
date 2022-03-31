@@ -25,6 +25,7 @@ header {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   background-color: #2E3A46;
   height: 355px;
   width: 198px;
@@ -34,6 +35,7 @@ header {
   text-transform: uppercase;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-size: 18px;
 }
 .card__thumb img{
   display: block;
@@ -44,11 +46,11 @@ header {
 }
 .card__name {
   color: gray;
-  font-size: 18px;
+  font-size: 15px;
 }
 .card__age {
   color: gray;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 section {

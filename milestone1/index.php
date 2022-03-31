@@ -101,26 +101,29 @@ $dischi = [
         <div class="container">
             <div class="album-wrapper">
 
-                <div class="card">
+                <?php foreach ($dischi as $disc) : ?>
 
-                    <figure class="card__thumb">
-                        <!-- <img src="../assets/img/logo.png" alt=""> -->
-                    </figure>
+                    <div class="card">
 
-                    <h1 class="card__title">
-                        <!-- New jersey -->
-                    </h1>
+                        <figure class="card__thumb">
+                            <img src="<?php echo ($disc['poster']) ?>">
+                        </figure>
 
-                    <span class="card__name">
-                        <!-- Bon Jovi -->
-                    </span>
+                        <h1 class="card__title">
+                            <?php echo ($disc['title']) ?>
+                        </h1>
+                        <div>
+                            <span class="card__name">
+                                <?php echo ($disc['author']) ?>
+                            </span>
 
-                    <span class="card__age">
-                        <!-- 1988 -->
-                    </span>
+                            <span class="card__age">
+                                <?php echo($disc['year']) ?>
+                            </span>
+                        </div>
+                    </div>
 
-                </div>
-
+                <?php endforeach ?>
             </div>
         </div>
     </section>
