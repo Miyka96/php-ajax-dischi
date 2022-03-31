@@ -25,17 +25,26 @@
         <div class="container">
           <div class="album-wrapper">
             
-            <div class="card">
+            <div class="card" v-for="item in dischi" :key="item.id">
+            
               <figure class="card__thumb">
-                <img src="" />
+                <img :src="item.poster"/>
               </figure>
 
-              <h1 class="card__title"></h1>
-              <div>
-                <span class="card__name"> </span>
+              <h1 class="card__title">
+                {{item.title}}
+              </h1>
 
-                <span class="card__age"> </span>
+              <div>
+                <span class="card__name"> 
+                  {{item.author}}
+                </span>
+
+                <span class="card__age"> 
+                  {{item.year}}
+                </span>
               </div>
+
             </div>
 
           </div>
